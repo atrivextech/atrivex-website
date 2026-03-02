@@ -1,4 +1,5 @@
 import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiTwitter, FiGithub } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   const logoSrc = `${import.meta.env.BASE_URL}images/atrivex-logo.svg`
@@ -21,24 +22,24 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
+                <Link to="/about" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
+                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#portfolio" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
+                <Link to="/portfolio" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
+                <Link to="/contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

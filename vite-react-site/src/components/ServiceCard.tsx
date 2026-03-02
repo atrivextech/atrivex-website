@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import type { IconType } from 'react-icons'
+import { Link } from 'react-router-dom'
 
 interface ServiceCardProps {
   icon: IconType
@@ -22,9 +23,9 @@ export default function ServiceCard({ icon: Icon, title, description, index }: S
       </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
-      <a href="#contact" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+      <Link to="/services" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
         Learn More →
-      </a>
+      </Link>
     </motion.div>
   )
 }

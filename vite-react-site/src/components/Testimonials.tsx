@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function Testimonials() {
   return (
@@ -19,18 +20,18 @@ export default function Testimonials() {
             something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="px-10 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold text-lg shadow-lg hover:shadow-xl"
             >
               Get Started Today
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              to="/portfolio"
               className="px-10 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition font-semibold text-lg"
             >
               View Our Work
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

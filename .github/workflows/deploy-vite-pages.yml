@@ -35,6 +35,12 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: vite-react-site
+        env:
+          VITE_BASE_PATH: /atrivex-website/
+
+      - name: SPA fallback for Pages
+        run: cp dist/index.html dist/404.html
+        working-directory: vite-react-site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

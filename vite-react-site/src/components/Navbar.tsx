@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi'
+import { NavLink } from 'react-router-dom'
 import { useTheme } from './ThemeProvider'
 
 export default function Navbar() {
@@ -8,31 +9,35 @@ export default function Navbar() {
   const logoSrc = `${import.meta.env.BASE_URL}images/atrivex-logo.svg`
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#services', label: 'Services' },
-    { href: '#about', label: 'About' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/contact', label: 'Contact' },
   ]
 
   return (
     <nav className="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="#home" className="flex items-center gap-2">
+          <NavLink to="/" className="flex items-center gap-2">
             <img src={logoSrc} alt="Atrivex Technology" className="w-10 h-10" />
             <span className="text-2xl font-bold text-gradient">Atrivex</span>
-          </a>
+          </NavLink>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <NavLink
                 key={link.href}
-                href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition"
+                to={link.href}
+                className={({ isActive }) =>
+                  `text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition ${
+                    isActive ? 'text-primary-600 dark:text-primary-400' : ''
+                  }`
+                }
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
             <button
               onClick={toggleTheme}
@@ -53,14 +58,14 @@ export default function Navbar() {
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a
+              <NavLink
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </div>
         </div>

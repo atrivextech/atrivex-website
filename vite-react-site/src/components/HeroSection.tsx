@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function HeroSection() {
   const bannerSrc = `${import.meta.env.BASE_URL}images/hereBanner.png`
@@ -47,12 +48,12 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a href="#contact" className="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium">
+          <Link to="/contact" className="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium">
             Get Started
-          </a>
-          <a href="#services" className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition font-medium">
+          </Link>
+          <Link to="/services" className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition font-medium">
             Our Services
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
