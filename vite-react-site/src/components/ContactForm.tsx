@@ -14,7 +14,18 @@ export default function ContactForm() {
     setStatus('loading')
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 600))
+      const apiResponse = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!apiResponse.ok) {
+        throw new Error('Failed to send contact message')
+      }
+
       setStatus('success')
       setFormData({ name: '', email: '', phone: '', message: '' })
     } catch {
@@ -87,7 +98,7 @@ export default function ContactForm() {
         {status === 'loading' ? 'Sending...' : 'Send Message'}
       </button>
 
-      {status === 'success' && <p className="text-green-600 dark:text-green-400">Message captured successfully!</p>}
+      {status === 'success' && <p className="text-green-600 dark:text-green-400">Message sent successfully!</p>}
       {status === 'error' && <p className="text-red-600 dark:text-red-400">Failed to send message. Please try again.</p>}
     </form>
   )
