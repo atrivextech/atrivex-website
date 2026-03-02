@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <!-- Circuit pattern with A in center -->
+  <g stroke="#2563eb" stroke-width="12" stroke-linecap="round">
+    <!-- Top connections -->
+    <circle cx="400" cy="150" r="15" fill="#2563eb"/>
+    <line x1="400" y1="165" x2="400" y2="220"/>
+    <circle cx="450" cy="150" r="15" fill="#2563eb"/>
+    <line x1="450" y1="165" x2="450" y2="220"/>
+    <circle cx="350" cy="150" r="15" fill="#2563eb"/>
+    <line x1="350" y1="165" x2="350" y2="220"/>
+    
+    <!-- Right connections -->
+    <circle cx="650" cy="300" r="15" fill="#2563eb"/>
+    <line x1="635" y1="300" x2="580" y2="300"/>
+    <circle cx="650" cy="400" r="15" fill="#2563eb"/>
+    <line x1="635" y1="400" x2="580" y2="400"/>
+    <circle cx="650" cy="500" r="15" fill="#2563eb"/>
+    <line x1="635" y1="500" x2="580" y2="500"/>
+    
+    <!-- Bottom connections -->
+    <circle cx="400" cy="650" r="15" fill="#2563eb"/>
+    <line x1="400" y1="635" x2="400" y2="580"/>
+    <circle cx="450" cy="650" r="15" fill="#2563eb"/>
+    <line x1="450" y1="635" x2="450" y2="580"/>
+    <circle cx="350" cy="650" r="15" fill="#2563eb"/>
+    <line x1="350" y1="635" x2="350" y2="580"/>
+    
+    <!-- Left connections -->
+    <circle cx="150" cy="300" r="15" fill="#2563eb"/>
+    <line x1="165" y1="300" x2="220" y2="300"/>
+    <circle cx="150" cy="400" r="15" fill="#2563eb"/>
+    <line x1="165" y1="400" x2="220" y2="400"/>
+    <circle cx="150" cy="500" r="15" fill="#2563eb"/>
+    <line x1="165" y1="500" x2="220" y2="500"/>
+    
+    <!-- Diamond frame -->
+    <path d="M 400 220 L 580 400 L 400 580 L 220 400 Z" fill="none" stroke-width="16"/>
+    
+    <!-- Inner connections -->
+    <line x1="350" y1="220" x2="280" y2="290"/>
+    <line x1="450" y1="220" x2="520" y2="290"/>
+    <line x1="220" y1="300" x2="280" y2="340"/>
+    <line x1="220" y1="500" x2="280" y2="460"/>
+    <line x1="580" y1="300" x2="520" y2="340"/>
+    <line x1="580" y1="500" x2="520" y2="460"/>
+    <line x1="350" y1="580" x2="280" y2="510"/>
+    <line x1="450" y1="580" x2="520" y2="510"/>
+  </g>
+  
+  <!-- Letter A in center -->
+  <path d="M 400 320 L 450 450 L 430 450 L 420 420 L 380 420 L 370 450 L 350 450 L 400 320 Z M 390 400 L 410 400 L 400 370 Z" fill="#2563eb" stroke="none"/>
+</svg>

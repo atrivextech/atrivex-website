@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" fill="none">
+  <!-- Circuit pattern icon -->
+  <g transform="translate(312, 80)">
+    <g stroke="#84cc16" stroke-width="8" stroke-linecap="round">
+      <!-- Top connections -->
+      <circle cx="200" cy="40" r="10" fill="#84cc16"/>
+      <line x1="200" y1="50" x2="200" y2="90"/>
+      <circle cx="230" cy="40" r="10" fill="#84cc16"/>
+      <line x1="230" y1="50" x2="230" y2="90"/>
+      <circle cx="170" cy="40" r="10" fill="#84cc16"/>
+      <line x1="170" y1="50" x2="170" y2="90"/>
+      
+      <!-- Right connections -->
+      <circle cx="320" cy="140" r="10" fill="#84cc16"/>
+      <line x1="310" y1="140" x2="270" y2="140"/>
+      <circle cx="320" cy="200" r="10" fill="#84cc16"/>
+      <line x1="310" y1="200" x2="270" y2="200"/>
+      <circle cx="320" cy="260" r="10" fill="#84cc16"/>
+      <line x1="310" y1="260" x2="270" y2="260"/>
+      
+      <!-- Bottom connections -->
+      <circle cx="200" cy="360" r="10" fill="#84cc16"/>
+      <line x1="200" y1="350" x2="200" y2="310"/>
+      <circle cx="230" cy="360" r="10" fill="#84cc16"/>
+      <line x1="230" y1="350" x2="230" y2="310"/>
+      <circle cx="170" cy="360" r="10" fill="#84cc16"/>
+      <line x1="170" y1="350" x2="170" y2="310"/>
+      
+      <!-- Left connections -->
+      <circle cx="80" cy="140" r="10" fill="#84cc16"/>
+      <line x1="90" y1="140" x2="130" y2="140"/>
+      <circle cx="80" cy="200" r="10" fill="#84cc16"/>
+      <line x1="90" y1="200" x2="130" y2="200"/>
+      <circle cx="80" cy="260" r="10" fill="#84cc16"/>
+      <line x1="90" y1="260" x2="130" y2="260"/>
+      
+      <!-- Diamond frame -->
+      <path d="M 200 90 L 270 200 L 200 310 L 130 200 Z" fill="none" stroke-width="10"/>
+      
+      <!-- Inner connections -->
+      <line x1="170" y1="90" x2="140" y2="130"/>
+      <line x1="230" y1="90" x2="260" y2="130"/>
+      <line x1="130" y1="140" x2="150" y2="170"/>
+      <line x1="130" y1="260" x2="150" y2="230"/>
+      <line x1="270" y1="140" x2="250" y2="170"/>
+      <line x1="270" y1="260" x2="250" y2="230"/>
+      <line x1="170" y1="310" x2="140" y2="270"/>
+      <line x1="230" y1="310" x2="260" y2="270"/>
+    </g>
+    
+    <!-- Letter A in center -->
+    <path d="M 200 160 L 230 240 L 220 240 L 215 225 L 185 225 L 180 240 L 170 240 L 200 160 Z M 190 210 L 210 210 L 200 180 Z" fill="#84cc16" stroke="none"/>
+  </g>
+  
+  <!-- ATRIVEX text -->
+  <text x="512" y="560" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#d4f54e" text-anchor="middle">ATRIVEX</text>
+  
+  <!-- TECHNOLOGY PVT LTD text -->
+  <text x="512" y="630" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#c8e86f" text-anchor="middle" letter-spacing="4">TECHNOLOGY PVT LTD</text>
+  
+  <!-- RESEARCH • DEVELOPMENT • CONSULTING text -->
+  <text x="512" y="690" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#84cc16" text-anchor="middle" letter-spacing="2">RESEARCH • DEVELOPMENT • CONSULTING</text>
+</svg>
