@@ -5,11 +5,10 @@ interface ServiceCardProps {
   icon: IconType
   title: string
   description: string
-  link: string
   index: number
 }
 
-export default function ServiceCard({ icon: Icon, title, description, link, index }: ServiceCardProps) {
+export default function ServiceCard({ icon: Icon, title, description, index }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

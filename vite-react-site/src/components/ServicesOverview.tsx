@@ -7,25 +7,21 @@ const services = [
     icon: FiCode,
     title: 'Software Development',
     description: 'Custom software solutions tailored to your business needs with modern technologies.',
-    link: '/services/software-development',
   },
   {
     icon: FiCpu,
     title: 'AI & Automation',
     description: 'Intelligent automation and AI-powered solutions to optimize your operations.',
-    link: '/services/ai-automation',
   },
   {
     icon: FiCloud,
     title: 'Cloud Solutions',
     description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-    link: '/services/cloud-solutions',
   },
   {
     icon: FiSmartphone,
     title: 'Web & Mobile Apps',
     description: 'Responsive web and mobile applications that deliver exceptional user experiences.',
-    link: '/services/web-mobile-apps',
   },
 ]
 
