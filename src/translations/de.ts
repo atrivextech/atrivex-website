@@ -52,6 +52,7 @@ const de: Translations = {
   video: {
     heading: 'Atrivex in Aktion erleben',
     subheading: 'Entdecken Sie, wie unsere KI-fähigen Lösungen Unternehmen weltweit transformieren',
+    caption: 'Schauen Sie sich unser Unternehmensintrovideo an',
   },
   testimonials: {
     heading: 'Bereit, Ihr Unternehmen zu transformieren?',
