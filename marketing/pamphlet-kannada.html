@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtriVex Technology - Kannada Pamphlet</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans Kannada', Arial, sans-serif;
+            background: #1e3a5f;
+            color: white;
+            line-height: 1.6;
+        }
+        .pamphlet {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            background: linear-gradient(135deg, #0f2847 0%, #1e3a5f 50%, #2a5a8f 100%);
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #4a8ff7 0%, #2563eb 100%);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4a8ff7, #2563eb);
+            border-radius: 10px;
+        }
+        .company-name {
+            color: #1e3a5f;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .tagline {
+            color: #d4f54e;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 10px 0;
+        }
+        .subtitle {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 12px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header .location-text {
+            color: #c8e86f;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .gradient-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #4a8ff7, #84cc16, #d4f54e);
+            margin: 15px 0;
+        }
+        .contact-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid;
+        }
+        .contact-box.blue { border-color: #4a8ff7; }
+        .contact-box.green { border-color: #84cc16; }
+        .contact-box.yellow { border-color: #d4f54e; }
+        .contact-box h3 {
+            font-size: 12px;
+            color: #d4f54e;
+            margin-bottom: 5px;
+        }
+        .contact-box .location {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .contact-box .number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #84cc16;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4f54e;
+            margin: 20px 0 10px 0;
+            border-bottom: 3px solid #84cc16;
+            padding-bottom: 5px;
+        }
+        .service-item {
+            background: rgba(255,255,255,0.08);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+        .service-item:nth-child(1) { border-color: #4a8ff7; }
+        .service-item:nth-child(2) { border-color: #84cc16; }
+        .service-item:nth-child(3) { border-color: #d4f54e; }
+        .service-item:nth-child(4) { border-color: #c8e86f; }
+        .service-item h3 {
+            color: #d4f54e;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .service-item p {
+            font-size: 13px;
+            color: #e0e0e0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #1e3a5f, #2a5a8f);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border: 3px solid #84cc16;
+        }
+        .cta-box h2 {
+            color: #d4f54e;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .cta-box .phone {
+            font-size: 32px;
+            font-weight: bold;
+            color: #84cc16;
+            margin: 10px 0;
+        }
+        .cta-box .subphone {
+            font-size: 16px;
+            color: #c8e86f;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .feature-item {
+            background: rgba(132, 204, 22, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .feature-item::before {
+            content: "✓ ";
+            color: #84cc16;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .footer {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .footer h4 {
+            color: #d4f54e;
+            margin-bottom: 8px;
+        }
+        .footer p {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .qr-section {
+            text-align: center;
+        }
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pamphlet">
+        <div class="header">
+            <div style="text-align: center;">
+                <div style="background: white; padding: 12px; border-radius: 12px; display: inline-block; margin-bottom: 10px;">
+                    <img src="Logo1.png" alt="AtriVex Technology Logo" style="height: 180px; width: auto;">
+                </div>
+            </div>
+            <div class="tagline">ಸಂಶೋಧನೆ • ಅಭಿವೃದ್ಧಿ • ಸಲಹೆ</div>
+            <div class="subtitle">ನಿಮ್ಮ ಸ್ಥಳೀಯ ತಂತ್ರಜ್ಞಾನ ಪಾಲುದಾರ</div>
+            <div class="location-text">ಬೆಂಗಳೂರು - ಶಿವಮೊಗ್ಗ - ತೀರ್ಥಹಳ್ಳಿ</div>
+        </div>
+
+        <div class="gradient-bar"></div>
+
+        <div class="contact-boxes">
+            <div class="contact-box blue">
+                <h3>📍 ಮುಖ್ಯ ಕಛೇರಿ</h3>
+                <div class="location">ಬೆಂಗಳೂರು</div>
+                <div class="number">8884244422</div>
+            </div>
+            <div class="contact-box green">
+                <h3>📍 ಪ್ರಾದೇಶಿಕ</h3>
+                <div class="location">ಶಿವಮೊಗ್ಗ</div>
+                <div class="number">97312341111</div>
+            </div>
+            <div class="contact-box yellow">
+                <h3>📍 ಪ್ರಾದೇಶಿಕ</h3>
+                <div class="location">ತೀರ್ಥಹಳ್ಳಿ</div>
+                <div class="number">82777 55555</div>
+            </div>
+        </div>
+
+        <div class="section-title">ನಾವು ಏನು ಮಾಡುತ್ತೇವೆ?</div>
+        <div style="font-size: 12px; color: #c8e86f; margin-bottom: 15px;">ನಮ್ಮ ಸಂಪೂರ್ಣ ಸೇವಾ ಪಟ್ಟಿ | ನೋಡಿ: www.atrivextech.com</div>
+
+        <div class="service-item">
+            <h3>📱 ಮೊಬೈಲ್ ಆ್ಯಪ್ ಅಭಿವೃದ್ಧಿ — Android ಮತ್ತು iOS</h3>
+            <p>ಎರಡೂ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳಲ್ಲಿ ನಿಮ್ಮ ವ್ಯಾಪಾರಕ್ಕಾಗಿ ಕಸ್ಟಮ್ ಆ್ಯಪ್‌ಗಳು — ಗ್ರಾಹಕ ಆ್ಯಪ್‌ಗಳು, ಡೆಲಿವರಿ ಟ್ರ್ಯಾಕರ್‌ಗಳು, ಅಥವಾ ನಿರ್ವಹಣಾ ಸಾಧನಗಳು, ಕೈಗೆಟುಕುವ ಬೆಲೆಗಳಲ್ಲಿ ವೇಗವಾಗಿ ವಿತರಿಸಲಾಗುತ್ತದೆ।</p>
+        </div>
+
+        <div class="service-item">
+            <h3>🌐 ವೆಬ್‌ಸೈಟ್ ವಿನ್ಯಾಸ ಮತ್ತು ಕ್ಲೌಡ್ ಹೋಸ್ಟಿಂಗ್</h3>
+            <p>ಕ್ಲೌಡ್‌ನಲ್ಲಿ ಹೋಸ್ಟ್ ಮಾಡಲಾದ ವೃತ್ತಿಪರ, ಆಧುನಿಕ ವೆಬ್‌ಸೈಟ್‌ಗಳು। ಲ್ಯಾಂಡಿಂಗ್ ಪುಟಗಳಿಂದ ಸಂಪೂರ್ಣ ಇ-ಕಾಮರ್ಸ್‌ವರೆಗೆ — ಸಣ್ಣ ಮತ್ತು ಮಧ್ಯಮ ವ್ಯವಹಾರಗಳಿಗೆ ಪರಿಪೂರ್ಣ।</p>
+        </div>
+
+        <div class="service-item">
+            <h3>📢 ಡಿಜಿಟಲ್ ಮಾರ್ಕೆಟಿಂಗ್</h3>
+            <p>ನಿಮ್ಮ ಬ್ರಾಂಡ್ ಅನ್ನು ಬೆಳೆಸಲು ಮತ್ತು ನಿಮ್ಮ ಸ್ಥಳೀಯ ಪ್ರದೇಶದಲ್ಲಿ ಮಾರಾಟವನ್ನು ಹೆಚ್ಚಿಸಲು ಗುರಿಪಡಿಸಿದ Google, Instagram ಮತ್ತು Facebook ಪ್ರಚಾರಗಳು।</p>
+        </div>
+
+        <div class="service-item">
+            <h3>💻 AI ಪರಿಹಾರಗಳು ಮತ್ತು ಕಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್</h3>
+            <p>ಅತ್ಯಾಧುನಿಕ AI ಸ್ವಯಂಚಾಲನೆ, ಮೆಷಿನ್ ಲರ್ನಿಂಗ್, ಮತ್ತು ಕಸ್ಟಮ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅಭಿವೃದ್ಧಿ। ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸಲು ಮತ್ತು ಉತ್ಪಾದಕತೆಯನ್ನು ಹೆಚ್ಚಿಸಲು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯನ್ನು ಬಳಸಿಕೊಳ್ಳಲು ನಾವು ವ್ಯವಹಾರಗಳಿಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇವೆ।</p>
+        </div>
+
+        <div class="cta-box">
+            <h2>🎯 ಉಚಿತ ಸಲಹೆ ಪಡೆಯಿರಿ!</h2>
+            <p style="font-size: 14px; margin: 10px 0;">ಇಂದೇ ನಮ್ಮ ತಂಡದೊಂದಿಗೆ ಮಾತನಾಡಿ — ಯಾವುದೇ ಬದ್ಧತೆ ಇಲ್ಲ, ಶುಲ್ಕ ಇಲ್ಲ। ನಾವು ಸರಿಯಾದ ಪರಿಹಾರವನ್ನು ಕಂಡುಕೊಳ್ಳುತ್ತೇವೆ।</p>
+            <div class="phone">8884244422</div>
+            <div class="subphone">ತೀರ್ಥಹಳ್ಳಿ: 82777 55555 / ಶಿವಮೊಗ್ಗ: 97312341111</div>
+            <div class="whatsapp-btn">💬 ಈಗಲೇ WhatsApp ಮಾಡಿ</div>
+        </div>
+
+        <div class="section-title">AtriVex ಅನ್ನು ಏಕೆ ಆಯ್ಕೆ ಮಾಡಬೇಕು?</div>
+        <div class="features">
+            <div class="feature-item">AI-ಚಾಲಿತ ಪರಿಹಾರಗಳು</div>
+            <div class="feature-item">ಸ್ಥಳೀಯ ಬೆಂಗಳೂರು ತಂಡ</div>
+            <div class="feature-item">ಕೈಗೆಟುಕುವ ಬೆಲೆ</div>
+            <div class="feature-item">ವೇಗದ ವಿತರಣೆ</div>
+            <div class="feature-item">ಬಹುಭಾಷಾ ಬೆಂಬಲ</div>
+            <div class="feature-item">ಜಾಗತಿಕ ಅನುಭವ</div>
+        </div>
+
+        <div style="background: rgba(132, 204, 22, 0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+            <h3 style="color: #d4f54e; margin-bottom: 8px;">🌍 ಜಾಗತಿಕ ಅನುಭವ, ಸ್ಥಳೀಯ ಸೇವೆ</h3>
+            <p style="font-size: 13px;">• ಬಹುಭಾಷಾ ಬೆಂಬಲ (ಇಂಗ್ಲಿಷ್, ಹಿಂದಿ, ಕನ್ನಡ, ಜರ್ಮನ್)<br>
+            • ಅಂತರರಾಷ್ಟ್ರೀಯ ಯೋಜನಾ ವಿತರಣೆ (ಭಾರತ, ಜರ್ಮನಿ)<br>
+            • ವಿಶ್ವಾದ್ಯಂತ ವ್ಯವಹಾರಗಳಿಂದ ವಿಶ್ವಾಸಾರ್ಹ</p>
+        </div>
+
+        <div class="footer">
+            <div class="footer-grid">
+                <div>
+                    <h4>ಸಂಪರ್ಕ ಮಾಹಿತಿ</h4>
+                    <p>
+                        <strong>ವೆಬ್‌ಸೈಟ್:</strong> www.atrivextech.com<br>
+                        <strong>ಇಮೇಲ್:</strong> sales@atrivextech.com<br>
+                        <strong>ಫೋನ್:</strong> +91 8884244422<br><br>
+                        <strong>ವಿಳಾಸ:</strong><br>
+                        #07, ಭುವನೇಶ್ವರಿ ಲೇಔಟ್ ಬಿ ಕ್ರಾಸ್<br>
+                        ನಾಗನಾಥಪುರ ಹೊಸ ರೋಡ್<br>
+                        ಬೆಂಗಳೂರು-560100, ಕರ್ನಾಟಕ, ಭಾರತ
+                    </p>
+                </div>
+                <div class="qr-section">
+                    <h4>ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</h4>
+                    <img src="whatsapp-qr.png" alt="WhatsApp QR Code" style="width: 120px; height: 120px; border-radius: 10px; margin: 10px auto; display: block;">
+                    <p style="font-size: 11px;">ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಮತ್ತು ಸಂದೇಶ ಕಳುಹಿಸಿ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

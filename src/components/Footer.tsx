@@ -57,13 +57,13 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t.footer.followUs}</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="LinkedIn">
                 <FiLinkedin size={20} />
               </a>
-              <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="Twitter">
+              <a href="https://twitter.com/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="Twitter">
                 <FiTwitter size={20} />
               </a>
-              <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="GitHub">
+              <a href="https://github.com/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="GitHub">
                 <FiGithub size={20} />
               </a>
             </div>

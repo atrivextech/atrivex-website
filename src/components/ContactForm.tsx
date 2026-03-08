@@ -28,7 +28,7 @@ export default function ContactForm() {
       } else {
         setStatus('error')
       }
-    } catch (error) {
+    } catch {
       setStatus('error')
     }
   }
@@ -99,10 +99,10 @@ export default function ContactForm() {
       </button>
 
       {status === 'success' && (
-        <p className="text-green-600 dark:text-green-400">Message sent successfully!</p>
+        <p className="text-green-600 dark:text-green-400">Thank you! We&apos;ve received your message and will get back to you within 24 hours.</p>
       )}
       {status === 'error' && (
-        <p className="text-red-600 dark:text-red-400">Failed to send message. Please try again.</p>
+        <p className="text-red-600 dark:text-red-400">Failed to send message. Please try again or email us directly at sales@atrivextech.com</p>
       )}
     </form>
   )

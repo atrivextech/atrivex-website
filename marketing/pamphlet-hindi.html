@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtriVex Technology - Hindi Pamphlet</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+            background: #1e3a5f;
+            color: white;
+            line-height: 1.6;
+        }
+        .pamphlet {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            background: linear-gradient(135deg, #0f2847 0%, #1e3a5f 50%, #2a5a8f 100%);
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #4a8ff7 0%, #2563eb 100%);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4a8ff7, #2563eb);
+            border-radius: 10px;
+        }
+        .company-name {
+            color: #1e3a5f;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .tagline {
+            color: #d4f54e;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 10px 0;
+        }
+        .subtitle {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 12px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header .location-text {
+            color: #c8e86f;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .gradient-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #4a8ff7, #84cc16, #d4f54e);
+            margin: 15px 0;
+        }
+        .contact-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid;
+        }
+        .contact-box.blue { border-color: #4a8ff7; }
+        .contact-box.green { border-color: #84cc16; }
+        .contact-box.yellow { border-color: #d4f54e; }
+        .contact-box h3 {
+            font-size: 12px;
+            color: #d4f54e;
+            margin-bottom: 5px;
+        }
+        .contact-box .location {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .contact-box .number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #84cc16;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4f54e;
+            margin: 20px 0 10px 0;
+            border-bottom: 3px solid #84cc16;
+            padding-bottom: 5px;
+        }
+        .service-item {
+            background: rgba(255,255,255,0.08);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+        .service-item:nth-child(1) { border-color: #4a8ff7; }
+        .service-item:nth-child(2) { border-color: #84cc16; }
+        .service-item:nth-child(3) { border-color: #d4f54e; }
+        .service-item:nth-child(4) { border-color: #c8e86f; }
+        .service-item h3 {
+            color: #d4f54e;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .service-item p {
+            font-size: 13px;
+            color: #e0e0e0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #1e3a5f, #2a5a8f);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border: 3px solid #84cc16;
+        }
+        .cta-box h2 {
+            color: #d4f54e;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .cta-box .phone {
+            font-size: 32px;
+            font-weight: bold;
+            color: #84cc16;
+            margin: 10px 0;
+        }
+        .cta-box .subphone {
+            font-size: 16px;
+            color: #c8e86f;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .feature-item {
+            background: rgba(132, 204, 22, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .feature-item::before {
+            content: "✓ ";
+            color: #84cc16;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .footer {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .footer h4 {
+            color: #d4f54e;
+            margin-bottom: 8px;
+        }
+        .footer p {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .qr-section {
+            text-align: center;
+        }
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            background: white;
+            margin: 10px auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #333;
+        }
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pamphlet">
+        <div class="header">
+            <div style="text-align: center;">
+                <div style="background: white; padding: 12px; border-radius: 12px; display: inline-block; margin-bottom: 10px;">
+                    <img src="Logo1.png" alt="AtriVex Technology Logo" style="height: 180px; width: auto;">
+                </div>
+            </div>
+            <div class="tagline">अनुसंधान • विकास • परामर्श</div>
+            <div class="subtitle">आपका स्थानीय प्रौद्योगिकी साझेदार</div>
+            <div class="location-text">बेंगलुरु - शिवमोग्गा - तीर्थहल्ली</div>
+        </div>
+
+        <div class="gradient-bar"></div>
+
+        <div class="contact-boxes">
+            <div class="contact-box blue">
+                <h3>📍 मुख्य कार्यालय</h3>
+                <div class="location">बेंगलुरु</div>
+                <div class="number">8884244422</div>
+            </div>
+            <div class="contact-box green">
+                <h3>📍 क्षेत्रीय</h3>
+                <div class="location">शिवमोग्गा</div>
+                <div class="number">97312341111</div>
+            </div>
+            <div class="contact-box yellow">
+                <h3>📍 क्षेत्रीय</h3>
+                <div class="location">तीर्थहल्ली</div>
+                <div class="number">82777 55555</div>
+            </div>
+        </div>
+
+        <div class="section-title">हम आपके व्यवसाय के लिए क्या करते हैं</div>
+        <div style="font-size: 12px; color: #c8e86f; margin-bottom: 15px;">हमारी संपूर्ण सेवा सूची | देखें: www.atrivextech.com</div>
+
+        <div class="service-item">
+            <h3>📱 मोबाइल ऐप विकास — Android और iOS</h3>
+            <p>दोनों प्लेटफॉर्म पर आपके व्यवसाय के लिए कस्टम ऐप्स — ग्राहक ऐप्स, डिलीवरी ट्रैकर्स, या प्रबंधन उपकरण, किफायती कीमतों पर तेजी से वितरित।</p>
+        </div>
+
+        <div class="service-item">
+            <h3>🌐 वेबसाइट डिज़ाइन और क्लाउड होस्टिंग</h3>
+            <p>क्लाउड पर होस्ट की गई पेशेवर, आधुनिक वेबसाइटें। लैंडिंग पेज से लेकर पूर्ण ई-कॉमर्स तक — छोटे और मध्यम व्यवसायों के लिए एकदम सही।</p>
+        </div>
+
+        <div class="service-item">
+            <h3>📢 डिजिटल मार्केटिंग</h3>
+            <p>अपने ब्रांड को बढ़ाने और अपने स्थानीय क्षेत्र में बिक्री बढ़ाने के लिए लक्षित Google, Instagram और Facebook अभियान।</p>
+        </div>
+
+        <div class="service-item">
+            <h3>💻 AI समाधान और कस्टम सॉफ्टवेयर</h3>
+            <p>अत्याधुनिक AI स्वचालन, मशीन लर्निंग, और कस्टम सॉफ्टवेयर विकास। हम व्यवसायों को संचालन को सुव्यवस्थित करने और उत्पादकता बढ़ाने के लिए कृत्रिम बुद्धिमत्ता का लाभ उठाने में मदद करते हैं।</p>
+        </div>
+
+        <div class="cta-box">
+            <h2>🎯 मुफ्त परामर्श!</h2>
+            <p style="font-size: 14px; margin: 10px 0;">आज ही हमारी टीम से बात करें — कोई प्रतिबद्धता नहीं, कोई शुल्क नहीं। हम सही समाधान खोजेंगे।</p>
+            <div class="phone">8884244422</div>
+            <div class="subphone">तीर्थहल्ली: 82777 55555 / शिवमोग्गा: 97312341111</div>
+            <div class="whatsapp-btn">💬 अभी WhatsApp करें</div>
+        </div>
+
+        <div class="section-title">AtriVex क्यों चुनें?</div>
+        <div class="features">
+            <div class="feature-item">AI-संचालित समाधान</div>
+            <div class="feature-item">स्थानीय बेंगलुरु टीम</div>
+            <div class="feature-item">किफायती मूल्य निर्धारण</div>
+            <div class="feature-item">तेज़ डिलीवरी</div>
+            <div class="feature-item">बहुभाषी समर्थन</div>
+            <div class="feature-item">वैश्विक अनुभव</div>
+        </div>
+
+        <div style="background: rgba(132, 204, 22, 0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+            <h3 style="color: #d4f54e; margin-bottom: 8px;">🌍 वैश्विक अनुभव, स्थानीय सेवा</h3>
+            <p style="font-size: 13px;">• बहुभाषी समर्थन (अंग्रेजी, हिंदी, कन्नड़, जर्मन)<br>
+            • अंतर्राष्ट्रीय परियोजना वितरण (भारत, जर्मनी)<br>
+            • दुनिया भर के व्यवसायों द्वारा विश्वसनीय</p>
+        </div>
+
+        <div class="footer">
+            <div class="footer-grid">
+                <div>
+                    <h4>संपर्क जानकारी</h4>
+                    <p>
+                        <strong>वेबसाइट:</strong> www.atrivextech.com<br>
+                        <strong>ईमेल:</strong> sales@atrivextech.com<br>
+                        <strong>फोन:</strong> +91 8884244422<br><br>
+                        <strong>पता:</strong><br>
+                        #07, भुवनेश्वरी लेआउट बी क्रॉस<br>
+                        नागनाथपुरा होसा रोड<br>
+                        बेंगलुरु-560100, कर्नाटक, भारत
+                    </p>
+                </div>
+                <div class="qr-section">
+                    <h4>स्कैन करें</h4>
+                    <img src="whatsapp-qr.png" alt="WhatsApp QR Code" style="width: 120px; height: 120px; border-radius: 10px; margin: 10px auto; display: block;">
+                    <p style="font-size: 11px;">स्कैन और संदेश भेजें</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

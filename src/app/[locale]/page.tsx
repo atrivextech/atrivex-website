@@ -5,6 +5,14 @@ import Testimonials from '@/components/Testimonials'
 import CTASection from '@/components/CTASection'
 import VideoSection from '@/components/VideoSection'
 
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'de' },
+    { locale: 'kn' },
+  ]
+}
+
 export default function Home() {
   return (
     <>

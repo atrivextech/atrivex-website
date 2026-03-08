@@ -13,25 +13,25 @@ export default function ServicesOverview() {
       icon: FiCode,
       title: t.services.items.software.title,
       description: t.services.items.software.description,
-      link: '/services/software-development',
+      link: '/services',
     },
     {
       icon: FiCpu,
       title: t.services.items.ai.title,
       description: t.services.items.ai.description,
-      link: '/services/ai-automation',
+      link: '/services',
     },
     {
       icon: FiCloud,
       title: t.services.items.cloud.title,
       description: t.services.items.cloud.description,
-      link: '/services/cloud-solutions',
+      link: '/services',
     },
     {
       icon: FiSmartphone,
       title: t.services.items.mobile.title,
       description: t.services.items.mobile.description,
-      link: '/services/web-mobile-apps',
+      link: '/services',
     },
   ]
 
