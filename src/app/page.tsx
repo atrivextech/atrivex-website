@@ -3,6 +3,7 @@ import ServicesOverview from '@/components/ServicesOverview'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Testimonials from '@/components/Testimonials'
 import CTASection from '@/components/CTASection'
+import VideoSection from '@/components/VideoSection'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <ServicesOverview />
       <WhyChooseUs />
+      <VideoSection />
       <Testimonials />
       <CTASection />
     </>

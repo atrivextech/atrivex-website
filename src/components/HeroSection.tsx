@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HeroSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
       {/* Hero Banner Background */}
@@ -35,6 +38,17 @@ export default function HeroSection() {
           />
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-4"
+        >
+          <span className="inline-block px-4 py-1.5 bg-primary-600/80 text-white text-sm font-semibold rounded-full tracking-wide uppercase">
+            {t.hero.tagline}
+          </span>
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,8 +56,8 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg"
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
         >
-          Transform Your Business with{' '}
-          <span className="text-gradient">Cutting-Edge Technology</span>
+          {t.hero.heading}{' '}
+          <span className="text-gradient">{t.hero.headingHighlight}</span>
         </motion.h1>
 
         <motion.p
@@ -53,8 +67,7 @@ export default function HeroSection() {
           className="text-xl text-white font-semibold mb-8 max-w-3xl mx-auto"
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
         >
-          We deliver innovative software solutions, AI automation, and cloud services
-          to help businesses thrive in the digital age.
+          {t.hero.description}
         </motion.p>
 
         <motion.div
@@ -67,13 +80,13 @@ export default function HeroSection() {
             href="/contact"
             className="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium"
           >
-            Get Started
+            {t.hero.cta}
           </Link>
           <Link
             href="/services"
             className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition font-medium"
           >
-            Our Services
+            {t.hero.ctaSecondary}
           </Link>
         </motion.div>
       </div>

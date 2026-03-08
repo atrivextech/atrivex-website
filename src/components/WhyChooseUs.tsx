@@ -2,31 +2,34 @@
 
 import { motion } from 'framer-motion'
 import { FiAward, FiUsers, FiZap, FiShield } from 'react-icons/fi'
-
-const features = [
-  {
-    icon: FiAward,
-    title: 'Expert Team',
-    description: 'Highly skilled professionals with years of industry experience',
-  },
-  {
-    icon: FiZap,
-    title: 'Fast Delivery',
-    description: 'Agile methodology ensuring quick turnaround times',
-  },
-  {
-    icon: FiShield,
-    title: 'Quality Assurance',
-    description: 'Rigorous testing and quality control processes',
-  },
-  {
-    icon: FiUsers,
-    title: 'Client-Focused',
-    description: 'Dedicated support and transparent communication',
-  },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage()
+
+  const features = [
+    {
+      icon: FiAward,
+      title: t.whyChooseUs.features.expert.title,
+      description: t.whyChooseUs.features.expert.description,
+    },
+    {
+      icon: FiZap,
+      title: t.whyChooseUs.features.fast.title,
+      description: t.whyChooseUs.features.fast.description,
+    },
+    {
+      icon: FiShield,
+      title: t.whyChooseUs.features.quality.title,
+      description: t.whyChooseUs.features.quality.description,
+    },
+    {
+      icon: FiUsers,
+      title: t.whyChooseUs.features.client.title,
+      description: t.whyChooseUs.features.client.description,
+    },
+  ]
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -36,9 +39,9 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Why Choose Atrivex</h2>
+          <h2 className="text-4xl font-bold mb-4">{t.whyChooseUs.heading}</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We combine technical excellence with business understanding
+            {t.whyChooseUs.subheading}
           </p>
         </motion.div>
 
