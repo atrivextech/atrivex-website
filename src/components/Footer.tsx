@@ -1,8 +1,13 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiTwitter, FiGithub } from 'react-icons/fi'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -19,22 +24,22 @@ export default function Footer() {
               <h3 className="text-xl font-bold text-gradient">Atrivex</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Leading technology company specializing in software development and digital transformation.
+              {t.footer.description}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">About Us</Link></li>
-              <li><Link href="/services" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">Services</Link></li>
-              <li><Link href="/portfolio" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">Portfolio</Link></li>
-              <li><Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">Contact</Link></li>
+              <li><Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.about}</Link></li>
+              <li><Link href="/services" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.services}</Link></li>
+              <li><Link href="/portfolio" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.portfolio}</Link></li>
+              <li><Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.contact}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">{t.footer.contact}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li className="flex items-center gap-2">
                 <FiMail /> sales@atrivextech.com
@@ -50,7 +55,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Follow Us</h4>
+            <h4 className="font-semibold mb-4">{t.footer.followUs}</h4>
             <div className="flex gap-4">
               <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="LinkedIn">
                 <FiLinkedin size={20} />
@@ -66,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-600 dark:text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Atrivex Technology Private Limited. All rights reserved.</p>
+          <p>{t.footer.copyright.replace('{year}', String(new Date().getFullYear()))}</p>
         </div>
       </div>
     </footer>
