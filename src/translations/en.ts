@@ -50,6 +50,7 @@ const en = {
   video: {
     heading: 'See Atrivex in Action',
     subheading: 'Discover how our AI-enabled solutions are transforming businesses worldwide',
+    caption: 'Watch our company intro video',
   },
   testimonials: {
     heading: 'Ready to Transform Your Business?',
