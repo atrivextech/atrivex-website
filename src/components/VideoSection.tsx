@@ -37,10 +37,11 @@ export default function VideoSection() {
 
     return (
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full"
         controls
         preload="metadata"
         poster={VIDEO_POSTER}
+        style={{ objectFit: 'contain', background: '#000' }}
       >
         <source src={LOCAL_VIDEO_SRC} type="video/mp4" />
         Your browser does not support the video tag.
@@ -66,8 +67,8 @@ export default function VideoSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative w-full rounded-2xl overflow-hidden shadow-2xl"
-          style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}
+          className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black"
+          style={{ paddingBottom: '56.25%', height: 0 }}
         >
           {renderPlayer()}
         </motion.div>

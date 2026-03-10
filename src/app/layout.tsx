@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans_Kannada } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const notoKannada = Noto_Sans_Kannada({ subsets: ['kannada'], weight: ['400', '600', '700'], variable: '--font-noto-kn' })
 
 export const metadata: Metadata = {
   title: 'Atrivex Technology - AI-Enabled Software Development & Solutions',
@@ -28,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${notoKannada.variable} font-sans`}>
         <ThemeProvider>
           <LanguageProvider>
             <Navbar />

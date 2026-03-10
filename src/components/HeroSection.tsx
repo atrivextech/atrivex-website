@@ -53,11 +53,16 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg"
+          className="text-5xl md:text-7xl font-bold mb-6 text-white break-words"
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
         >
           {t.hero.heading}{' '}
-          <span className="text-gradient">{t.hero.headingHighlight}</span>
+          <span
+            className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent"
+            style={{ textShadow: 'none', WebkitTextStroke: '0px' }}
+          >
+            {t.hero.headingHighlight}
+          </span>
         </motion.h1>
 
         <motion.p
