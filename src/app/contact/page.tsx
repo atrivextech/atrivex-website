@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 
@@ -51,8 +52,40 @@ export default function ContactPage() {
                   <p className="text-gray-600 dark:text-gray-400">
                     #07, Bhuvaneshwari Layout B Cross<br />
                     Nagnathpura Hosa Road<br />
-                    Bengaluru-560100
+                    Bengaluru-560100<br />
+                    Karnataka, India
                   </p>
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <h3 className="text-2xl font-semibold mb-4">Our Bengaluru Location</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                  Atrivex Technology Pvt. Limited is located in the southern part of India, in the state of Karnataka. The capital city, Bengaluru (Bangalore), is widely known as the “Silicon Valley of India” due to its strong technology industry and vibrant startup ecosystem.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mt-4">
+                  Our office is situated near Electronic City, one of Bengaluru’s major IT hubs. Electronic City was originally developed in the late 1970s and has grown significantly since the 1990s with the rise of India’s IT industry.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800">
+                    <Image
+                      src="/images/office-bengaluru-1.svg"
+                      alt="Atrivex Bengaluru office location"
+                      width={640}
+                      height={420}
+                      className="w-full h-56 object-cover"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800">
+                    <Image
+                      src="/images/office-bengaluru-2.svg"
+                      alt="Atrivex Bengaluru office building"
+                      width={640}
+                      height={420}
+                      className="w-full h-56 object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

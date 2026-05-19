@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <FiMapPin className="mt-1 flex-shrink-0" /> 
-                <span>#07, Bhuvaneshwari Layout B Cross, Nagnathpura Hosa Road, Bengaluru-560100</span>
+                <span>#07, Bhuvaneshwari Layout B Cross, Nagnathpura Hosa Road, Bengaluru-560100, Karnataka, India</span>
               </li>
             </ul>
           </div>
