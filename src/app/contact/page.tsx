@@ -68,22 +68,22 @@ export default function ContactPage() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800">
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800 aspect-video">
                     <Image
                       src="/images/office-bengaluru-1.svg"
                       alt="Atrivex Bengaluru office location"
                       width={640}
                       height={420}
-                      className="w-full h-56 object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800">
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800 aspect-video">
                     <Image
                       src="/images/office-bengaluru-2.svg"
                       alt="Atrivex Bengaluru office building"
                       width={640}
                       height={420}
-                      className="w-full h-56 object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
