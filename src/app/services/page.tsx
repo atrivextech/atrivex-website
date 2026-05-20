@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { FiCode, FiCpu, FiCloud, FiSmartphone } from 'react-icons/fi'
+import { services } from '@/lib/services'
 
 export const metadata: Metadata = {
   title: 'Our Services - Atrivex Technology',
