@@ -7,33 +7,6 @@ export const metadata: Metadata = {
   description: 'Explore our comprehensive technology services including software development, AI solutions, cloud services, and mobile app development.',
 }
 
-const services = [
-  {
-    icon: FiCode,
-    title: 'Software Development',
-    description: 'Custom enterprise software, web applications, and scalable solutions built with modern technologies.',
-    slug: 'software-development',
-  },
-  {
-    icon: FiCpu,
-    title: 'AI & Automation',
-    description: 'Machine learning models, intelligent automation, and AI-powered business solutions.',
-    slug: 'ai-automation',
-  },
-  {
-    icon: FiCloud,
-    title: 'Cloud Solutions',
-    description: 'Cloud migration, infrastructure setup, DevOps, and managed cloud services.',
-    slug: 'cloud-solutions',
-  },
-  {
-    icon: FiSmartphone,
-    title: 'Web & Mobile Apps',
-    description: 'Responsive web applications and native mobile apps for iOS and Android.',
-    slug: 'web-mobile-apps',
-  },
-]
-
 export default function ServicesPage() {
   return (
     <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
