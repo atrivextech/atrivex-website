@@ -8,9 +8,9 @@ export default function AboutPageContent() {
   const { t } = useLanguage()
 
   const milestones = [
-    { year: '2023', event: t.about.milestone1 },
-    { year: '2024', event: t.about.milestone2 },
-    { year: '2025', event: t.about.milestone3 },
+    { year: '2024', event: t.about.milestone1 },
+    { year: '2025', event: t.about.milestone2 },
+    { year: '2026', event: t.about.milestone3 },
     { year: '2026', event: t.about.milestone4 },
   ]
 
@@ -39,7 +39,7 @@ export default function AboutPageContent() {
         <section className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 text-center">
             <FiCalendar className="mx-auto mb-2 text-primary-600" size={24} />
-            <div className="text-2xl font-bold">2023</div>
+            <div className="text-2xl font-bold">2026</div>
             <div className="text-sm text-gray-500">{t.about.founded}</div>
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 text-center">
@@ -84,13 +84,24 @@ export default function AboutPageContent() {
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-8">{t.about.theTeam}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-sm border border-gray-100 dark:border-gray-800">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-500 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                VK
+            {/* Founding team card */}
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-sm border border-gray-100 dark:border-gray-800 md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex -space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-400 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-white dark:border-gray-900">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                  </div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-400 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-white dark:border-gray-900">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                  </div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-white dark:border-gray-900">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold">{t.about.founderName}</h3>
-              <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-3">{t.about.founderRole}</p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{t.about.founderBio}</p>
+              <h3 className="text-xl font-semibold">{t.about.teamTitle}</h3>
+              <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-3">{t.about.teamRole}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{t.about.teamBio}</p>
             </div>
             {/* Hiring card */}
             <div className="bg-gradient-to-br from-primary-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-8 border border-primary-100 dark:border-gray-700 flex flex-col items-center justify-center text-center">
