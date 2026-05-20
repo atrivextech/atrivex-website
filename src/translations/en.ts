@@ -3,6 +3,7 @@ const en = {
     home: 'Home',
     about: 'About',
     services: 'Services',
+    products: 'Products',
     portfolio: 'Portfolio',
     contact: 'Contact',
   },
@@ -63,6 +64,11 @@ const en = {
     heading: 'Ready to Transform Your Business with AI?',
     description: 'Let\'s discuss how our AI-enabled solutions can help you achieve your goals',
     button: 'Get in Touch',
+  },
+  products: {
+    heading: 'Our Products',
+    subheading: 'Purpose-built software products solving real problems in healthcare, retail, and enterprise',
+    viewAll: 'View All Products',
   },
   footer: {
     description: 'Leading technology company specializing in AI-enabled software development and digital transformation.',

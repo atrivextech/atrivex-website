@@ -1,7 +1,23 @@
 import { MetadataRoute } from 'next'
+import { products } from '@/lib/products'
+import { services } from '@/lib/services'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atrivex.com'
+
+  const productPages = products.map((p) => ({
+    url: `${baseUrl}/products/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  const servicePages = services.map((s) => ({
+    url: `${baseUrl}/services/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   return [
     {
@@ -23,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/products`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/portfolio`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -34,5 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    ...productPages,
+    ...servicePages,
   ]
 }

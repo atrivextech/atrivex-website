@@ -33,6 +33,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.about}</Link></li>
               <li><Link href="/services" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.services}</Link></li>
+              <li><Link href="/products" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.products ?? 'Products'}</Link></li>
               <li><Link href="/portfolio" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.portfolio}</Link></li>
               <li><Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-600">{t.nav.contact}</Link></li>
             </ul>

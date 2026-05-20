@@ -1,4 +1,4 @@
-import { FiCode, FiCpu, FiCloud, FiSmartphone } from 'react-icons/fi'
+import { FiCode, FiCpu, FiCloud, FiSmartphone, FiRefreshCw, FiDatabase } from 'react-icons/fi'
 
 export type Service = {
   slug: string
@@ -56,6 +56,36 @@ export const services: Service[] = [
       'Responsive web application development',
       'Native iOS and Android apps',
       'Cross-platform UI/UX design',
+    ],
+  },
+  {
+    slug: 'digitization',
+    title: 'Digitization Services',
+    description: 'End-to-end digitization of business processes — from paper to cloud, manual to automated.',
+    longDescription: 'We help traditional businesses make the leap to digital. Whether it is converting paper records to searchable digital archives, building custom workflow automation, setting up e-commerce, or digitizing field operations — we handle the full journey from assessment to deployment, training, and ongoing support.',
+    icon: FiRefreshCw,
+    features: [
+      'Business process assessment & digital roadmap',
+      'Paper-to-digital document conversion with OCR',
+      'Custom workflow automation',
+      'E-commerce setup & integration',
+      'Field operations digitization (mobile apps)',
+      'Staff training & change management',
+    ],
+  },
+  {
+    slug: 'data-analytics',
+    title: 'Data & Analytics',
+    description: 'Turn your business data into actionable insights with dashboards, reporting, and AI-powered analytics.',
+    longDescription: 'Our data and analytics services help businesses unlock the value hidden in their data. We design data pipelines, build interactive dashboards, set up automated reporting, and apply machine learning to surface patterns that drive better decisions.',
+    icon: FiDatabase,
+    features: [
+      'Custom dashboards & reporting',
+      'Data pipeline design & ETL',
+      'Business intelligence setup',
+      'AI-powered predictive analytics',
+      'Data warehouse architecture',
+      'Real-time monitoring & alerting',
     ],
   },
 ]

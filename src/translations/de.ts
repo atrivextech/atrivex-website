@@ -5,6 +5,7 @@ const de: Translations = {
     home: 'Startseite',
     about: 'Über uns',
     services: 'Dienstleistungen',
+    products: 'Produkte',
     portfolio: 'Portfolio',
     contact: 'Kontakt',
   },
@@ -65,6 +66,11 @@ const de: Translations = {
     heading: 'Bereit, Ihr Unternehmen mit KI zu transformieren?',
     description: 'Lassen Sie uns besprechen, wie unsere KI-fähigen Lösungen Ihnen helfen können',
     button: 'Kontakt aufnehmen',
+  },
+  products: {
+    heading: 'Unsere Produkte',
+    subheading: 'Maßgeschneiderte Softwareprodukte, die echte Probleme in Gesundheitswesen, Einzelhandel und Unternehmen lösen',
+    viewAll: 'Alle Produkte ansehen',
   },
   footer: {
     description: 'Führendes Technologieunternehmen für KI-gestützte Softwareentwicklung und digitale Transformation.',
