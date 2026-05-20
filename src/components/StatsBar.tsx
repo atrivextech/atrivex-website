@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const stats = [
-  { value: '6+', labelKey: 'products' },
-  { value: '3+', labelKey: 'industries' },
+  { value: '8+', labelKey: 'products' },
+  { value: '5+', labelKey: 'industries' },
   { value: '10+', labelKey: 'clients' },
   { value: '2+', labelKey: 'countries' },
 ]

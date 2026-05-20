@@ -1,4 +1,4 @@
-import { FiActivity, FiMapPin, FiShield, FiBookOpen, FiHome, FiBriefcase } from 'react-icons/fi'
+import { FiActivity, FiMapPin, FiShield, FiBookOpen, FiHome, FiBriefcase, FiSearch, FiTool } from 'react-icons/fi'
 
 export type Product = {
   slug: string
@@ -7,6 +7,7 @@ export type Product = {
   description: string
   longDescription: string
   icon: typeof FiActivity
+  logo?: string            // path to logo image in /public
   features: string[]
   techStack: string[]
   status: 'live' | 'beta' | 'coming-soon'
@@ -44,6 +45,7 @@ export const products: Product[] = [
     description: 'A mobile app that detects when users are near retail stores and delivers timely, relevant offers via push notifications.',
     longDescription: 'QuickFound uses geofencing technology to detect when shoppers enter a 100-meter radius around partner retail stores. It delivers GDPR-compliant push notifications with personalized offers, deep-links users directly into retailer apps, and works offline with encrypted local storage. Built for the European and Indian retail markets with full English and German language support.',
     icon: FiMapPin,
+    logo: '/images/products/quickfound.png',
     features: [
       'Geofence-triggered push notifications (100m radius)',
       'Deep linking to retail apps (Aldi, Lidl, D-Mart)',
@@ -57,6 +59,50 @@ export const products: Product[] = [
     techStack: ['Kotlin', 'Android', 'Jetpack Compose', 'Firebase', 'Gemini AI'],
     status: 'live',
     category: 'Retail Tech',
+  },
+  {
+    slug: 'atriscan',
+    name: 'AtriScan',
+    tagline: 'AI-Powered Document Intelligence',
+    description: 'Scan, extract, and digitize documents using AI — from invoices and receipts to medical records and legal papers.',
+    longDescription: 'AtriScan uses advanced AI and OCR to transform physical documents into structured, searchable digital data. Point your camera at an invoice, prescription, or form — AtriScan extracts the fields, categorizes the document, and stores it securely. Built for businesses drowning in paper: clinics, accounting firms, law offices, and government departments.',
+    icon: FiSearch,
+    logo: '/images/products/atriscan.png',
+    features: [
+      'AI-powered OCR with field extraction',
+      'Automatic document categorization',
+      'Handwriting recognition',
+      'Batch scanning & processing',
+      'Searchable digital archive',
+      'Export to PDF, Excel, JSON',
+      'API for integration with other systems',
+      'Multi-language document support',
+    ],
+    techStack: ['Python', 'TensorFlow', 'Flutter', 'FastAPI', 'AWS'],
+    status: 'coming-soon',
+    category: 'AI / Document Tech',
+  },
+  {
+    slug: 'atriwork',
+    name: 'AtriWork',
+    tagline: 'Smart Workforce Management',
+    description: 'Field workforce tracking, task assignment, attendance, and productivity analytics for teams on the move.',
+    longDescription: 'AtriWork is built for businesses with field teams — construction crews, delivery staff, sales reps, maintenance technicians. It tracks real-time location, assigns tasks with geo-verification, manages attendance with selfie check-in, and gives managers a live dashboard of team productivity. No more guesswork about who is where and what got done.',
+    icon: FiTool,
+    logo: '/images/products/atriwork.png',
+    features: [
+      'Real-time field staff location tracking',
+      'Task assignment with geo-verification',
+      'Selfie-based attendance & check-in',
+      'Route optimization for field visits',
+      'Expense reporting from the field',
+      'Manager dashboard & productivity analytics',
+      'Offline mode for low-connectivity areas',
+      'Payroll integration',
+    ],
+    techStack: ['Flutter', 'Dart', 'Node.js', 'PostgreSQL', 'Firebase'],
+    status: 'coming-soon',
+    category: 'Workforce',
   },
   {
     slug: 'atrivault',
@@ -86,6 +132,7 @@ export const products: Product[] = [
     description: 'A complete school and college management platform covering admissions, attendance, grades, fees, and parent communication.',
     longDescription: 'AtriCampus digitizes every aspect of educational institution management. From student admissions and attendance tracking to grade management, fee collection, and parent-teacher communication — it replaces paper registers and disconnected spreadsheets with a unified, FERPA-aware platform that works for K-12 schools and colleges alike.',
     icon: FiBookOpen,
+    logo: '/images/products/atricampus.png',
     features: [
       'Student admissions & enrollment',
       'Attendance tracking with biometric integration',
@@ -107,6 +154,7 @@ export const products: Product[] = [
     description: 'End-to-end real estate platform for property listing, virtual tours, document management, and transaction tracking.',
     longDescription: 'AtriEstates brings the entire property buying and selling journey online. Agents list properties with photos and virtual tours, buyers browse and shortlist, documents are managed securely, and transactions are tracked from offer to registration. Built for the Indian real estate market with RERA compliance baked in.',
     icon: FiHome,
+    logo: '/images/products/atriestate.png',
     features: [
       'Property listing with photos & virtual tours',
       'Buyer-agent matching & communication',

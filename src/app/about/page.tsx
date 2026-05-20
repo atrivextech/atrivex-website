@@ -11,7 +11,7 @@ const milestones = [
   { year: '2023', event: 'AtriVex Technology Pvt. Ltd. incorporated in Bengaluru' },
   { year: '2024', event: 'QuickFound launched on Google Play Store (Germany & India)' },
   { year: '2025', event: 'DocLync clinic management enters beta with early adopters' },
-  { year: '2026', event: 'Product portfolio grows to 6+ products across 4 industries' },
+  { year: '2026', event: 'Product portfolio grows to 8 products across 5 industries' },
 ]
 
 const team = [
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 text-center">
             <FiUsers className="mx-auto mb-2 text-primary-600" size={24} />
-            <div className="text-2xl font-bold">6+</div>
+            <div className="text-2xl font-bold">8+</div>
             <div className="text-sm text-gray-500">Products</div>
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 text-center">

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { products, getProductBySlug } from '@/lib/products'
 
@@ -59,9 +60,15 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
           <div className="h-3 bg-gradient-to-r from-primary-600 to-accent-500" />
           <div className="p-10 md:p-14">
             <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <product.icon className="text-white" size={32} />
-              </div>
+              {product.logo ? (
+                <div className="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
+                  <Image src={product.logo} alt={product.name} width={80} height={80} className="w-full h-full object-cover" />
+                </div>
+              ) : (
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-600 to-accent-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <product.icon className="text-white" size={36} />
+                </div>
+              )}
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-500 uppercase tracking-wider">

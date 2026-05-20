@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { products } from '@/lib/products'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -50,9 +51,15 @@ export default function ProductsShowcase() {
                   <div className="h-2 bg-gradient-to-r from-primary-600 to-accent-500" />
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-500 rounded-xl flex items-center justify-center">
-                        <product.icon className="text-white" size={24} />
-                      </div>
+                      {product.logo ? (
+                        <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0">
+                          <Image src={product.logo} alt={product.name} width={56} height={56} className="w-full h-full object-cover" />
+                        </div>
+                      ) : (
+                        <div className="w-14 h-14 bg-gradient-to-br from-primary-600 to-accent-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                          <product.icon className="text-white" size={24} />
+                        </div>
+                      )}
                       <span className={`text-xs font-semibold px-3 py-1 rounded-full ${statusColors[product.status]}`}>
                         {statusLabels[product.status]}
                       </span>
