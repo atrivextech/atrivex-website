@@ -12,14 +12,14 @@ const statusColors = {
   'coming-soon': 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400',
 }
 
-const statusLabels = {
-  live: 'Live',
-  beta: 'Beta',
-  'coming-soon': 'Coming Soon',
-}
-
 export default function ProductsShowcase() {
   const { t } = useLanguage()
+
+  const statusLabels = {
+    live: t.products.statusLive,
+    beta: t.products.statusBeta,
+    'coming-soon': t.products.statusComingSoon,
+  }
   const featured = products.slice(0, 3)
 
   return (

@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ContactForm() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,7 +39,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-2">
-          Name
+          {t.contact.form.name}
         </label>
         <input
           type="text"
@@ -51,7 +53,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="email" className="block text-sm font-medium mb-2">
-          Email
+          {t.contact.form.email}
         </label>
         <input
           type="email"
@@ -65,7 +67,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="phone" className="block text-sm font-medium mb-2">
-          Phone
+          {t.contact.form.phone}
         </label>
         <input
           type="tel"
@@ -78,7 +80,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-2">
-          Message
+          {t.contact.form.message}
         </label>
         <textarea
           id="message"
@@ -95,14 +97,14 @@ export default function ContactForm() {
         disabled={status === 'loading'}
         className="w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition disabled:opacity-50"
       >
-        {status === 'loading' ? 'Sending...' : 'Send Message'}
+        {status === 'loading' ? t.contact.form.sending : t.contact.form.send}
       </button>
 
       {status === 'success' && (
-        <p className="text-green-600 dark:text-green-400">Thank you! We&apos;ve received your message and will get back to you within 24 hours.</p>
+        <p className="text-green-600 dark:text-green-400">{t.contact.form.success}</p>
       )}
       {status === 'error' && (
-        <p className="text-red-600 dark:text-red-400">Failed to send message. Please try again or email us directly at sales@atrivextech.com</p>
+        <p className="text-red-600 dark:text-red-400">{t.contact.form.error}</p>
       )}
     </form>
   )

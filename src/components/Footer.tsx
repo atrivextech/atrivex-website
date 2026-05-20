@@ -72,11 +72,11 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-600 dark:text-gray-400">
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <Link href="/privacy" className="hover:text-primary-600">Privacy Policy</Link>
+            <Link href="/privacy" className="hover:text-primary-600">{t.footer.privacyPolicy}</Link>
             <span className="text-gray-300 dark:text-gray-700">|</span>
-            <Link href="/terms" className="hover:text-primary-600">Terms of Service</Link>
+            <Link href="/terms" className="hover:text-primary-600">{t.footer.termsOfService}</Link>
             <span className="text-gray-300 dark:text-gray-700">|</span>
-            <Link href="/impressum" className="hover:text-primary-600">Impressum</Link>
+            <Link href="/impressum" className="hover:text-primary-600">{t.footer.impressum}</Link>
           </div>
           <p className="text-center">{t.footer.copyright.replace('{year}', String(new Date().getFullYear()))}</p>
           <p className="text-center text-xs text-gray-400 dark:text-gray-500 mt-1">
