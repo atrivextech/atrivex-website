@@ -1,4 +1,6 @@
 import HeroSection from '@/components/HeroSection'
+import TrustBar from '@/components/TrustBar'
+import StatsBar from '@/components/StatsBar'
 import ServicesOverview from '@/components/ServicesOverview'
 import ProductsShowcase from '@/components/ProductsShowcase'
 import WhyChooseUs from '@/components/WhyChooseUs'
@@ -10,8 +12,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServicesOverview />
+      <TrustBar />
+      <StatsBar />
       <ProductsShowcase />
+      <ServicesOverview />
       <WhyChooseUs />
       <VideoSection />
       <Testimonials />
