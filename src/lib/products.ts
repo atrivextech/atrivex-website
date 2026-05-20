@@ -1,4 +1,4 @@
-import { FiActivity, FiMapPin, FiShield, FiBookOpen, FiHome, FiBriefcase, FiSearch, FiTool } from 'react-icons/fi'
+import { FiActivity, FiShield, FiBookOpen, FiHome, FiBriefcase, FiSearch, FiTool } from 'react-icons/fi'
 
 export type Product = {
   slug: string
@@ -37,28 +37,6 @@ export const products: Product[] = [
     techStack: ['React Native', 'Expo', 'Node.js', 'PostgreSQL', 'AWS'],
     status: 'beta',
     category: 'Healthcare',
-  },
-  {
-    slug: 'quickfound',
-    name: 'QuickFound',
-    tagline: 'Location-Based Retail Offers',
-    description: 'A mobile app that detects when users are near retail stores and delivers timely, relevant offers via push notifications.',
-    longDescription: 'QuickFound uses geofencing technology to detect when shoppers enter a 100-meter radius around partner retail stores. It delivers GDPR-compliant push notifications with personalized offers, deep-links users directly into retailer apps, and works offline with encrypted local storage. Built for the European and Indian retail markets with full English and German language support.',
-    icon: FiMapPin,
-    logo: '/images/products/quickfound.png',
-    features: [
-      'Geofence-triggered push notifications (100m radius)',
-      'Deep linking to retail apps (Aldi, Lidl, D-Mart)',
-      'GDPR-compliant data handling',
-      'Offline mode with encrypted storage',
-      'User interaction tracking & analytics',
-      'Multi-language support (English & German)',
-      'Partner retailer dashboard',
-      'Real-time offer management',
-    ],
-    techStack: ['Kotlin', 'Android', 'Jetpack Compose', 'Firebase', 'Gemini AI'],
-    status: 'live',
-    category: 'Retail Tech',
   },
   {
     slug: 'atriscan',

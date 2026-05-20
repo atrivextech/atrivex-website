@@ -23,10 +23,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/portfolio`,
+      url: `${baseUrl}/products`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,

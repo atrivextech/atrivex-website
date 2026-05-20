@@ -5,7 +5,7 @@ import { products } from '@/lib/products'
 
 export const metadata: Metadata = {
   title: 'Our Products - Atrivex Technology',
-  description: 'Explore AtriVex products: DocLync clinic management, QuickFound retail app, AtriVault document security, and more.',
+  description: 'Explore AtriVex products: DocLync clinic management, AtriScan document AI, AtriVault security, AtriWork workforce management, and more.',
 }
 
 const statusColors: Record<string, string> = {

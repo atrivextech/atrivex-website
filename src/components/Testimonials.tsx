@@ -12,12 +12,6 @@ const testimonials = [
     initials: 'RB',
   },
   {
-    quote: 'QuickFound was a complex geofencing project with GDPR requirements across two markets. The AtriVex team handled both the Android engineering and the compliance aspects seamlessly.',
-    name: 'QuickFound Project',
-    role: 'Retail Tech — Germany & India',
-    initials: 'QF',
-  },
-  {
     quote: 'We needed a clinic management system that could scale from a single-doctor practice to a multi-branch chain. DocLync was designed with that exact growth path in mind.',
     name: 'DocLync Early Access',
     role: 'Healthcare SaaS — Karnataka',
@@ -88,7 +82,7 @@ export default function Testimonials() {
               {t.testimonials.cta}
             </Link>
             <Link
-              href="/portfolio"
+              href="/products"
               className="px-10 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition font-semibold text-lg"
             >
               {t.testimonials.ctaSecondary}

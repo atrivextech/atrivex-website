@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const milestones = [
   { year: '2023', event: 'AtriVex Technology Pvt. Ltd. incorporated in Bengaluru' },
-  { year: '2024', event: 'QuickFound launched on Google Play Store (Germany & India)' },
+  { year: '2024', event: 'First client projects delivered — real estate and digitization' },
   { year: '2025', event: 'DocLync clinic management enters beta with early adopters' },
-  { year: '2026', event: 'Product portfolio grows to 8 products across 5 industries' },
+  { year: '2026', event: 'Product portfolio grows to 7 products across 5 industries' },
 ]
 
 const team = [
@@ -47,10 +47,9 @@ export default function AboutPage() {
               or not built for how they actually work.
             </p>
             <p>
-              We set out to change that. Our first product, <strong>QuickFound</strong>, was a location-based
-              retail app built for the German and Indian markets. Then came <strong>DocLync</strong> — after
+              We set out to change that. Our first major product, <strong>DocLync</strong>, was born after
               watching a doctor in Shivamogga manage appointments on a WhatsApp group and prescriptions on a
-              notepad, we realized clinic management software did not have to be a ₹5 lakh hospital system.
+              notepad. We realized clinic management software did not have to be a ₹5 lakh hospital system.
               It could be a simple SaaS that a single doctor sets up in 30 minutes.
             </p>
             <p>
@@ -75,7 +74,7 @@ export default function AboutPage() {
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 text-center">
             <FiUsers className="mx-auto mb-2 text-primary-600" size={24} />
-            <div className="text-2xl font-bold">8+</div>
+            <div className="text-2xl font-bold">7+</div>
             <div className="text-sm text-gray-500">Products</div>
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 text-center">
