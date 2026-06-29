@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiTwitter, FiGithub } from 'react-icons/fi'
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi'
+import { FaXTwitter } from 'react-icons/fa6'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
@@ -60,11 +61,14 @@ export default function Footer() {
               <a href="https://www.linkedin.com/company/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="LinkedIn">
                 <FiLinkedin size={20} />
               </a>
-              <a href="https://twitter.com/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="Twitter">
-                <FiTwitter size={20} />
+              <a href="https://www.facebook.com/profile.php?id=61590118005732" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="Facebook">
+                <FiFacebook size={20} />
               </a>
-              <a href="https://github.com/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="GitHub">
-                <FiGithub size={20} />
+              <a href="https://www.instagram.com/atrivextech/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="Instagram">
+                <FiInstagram size={20} />
+              </a>
+              <a href="https://x.com/atrivextech" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary-600" aria-label="X">
+                <FaXTwitter size={20} />
               </a>
             </div>
           </div>

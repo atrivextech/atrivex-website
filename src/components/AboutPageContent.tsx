@@ -4,14 +4,16 @@ import Link from 'next/link'
 import { FiMapPin, FiCalendar, FiUsers, FiGlobe } from 'react-icons/fi'
 import { useLanguage } from '@/contexts/LanguageContext'
 
+const ATRIESTATES_PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.atrivex.atriestates'
+
 export default function AboutPageContent() {
   const { t } = useLanguage()
 
-  const milestones = [
+  const milestones: Array<{ year: string; event: string; href?: string }> = [
     { year: '2024', event: t.about.milestone1 },
     { year: '2025', event: t.about.milestone2 },
     { year: '2026', event: t.about.milestone3 },
-    { year: '2026', event: t.about.milestone4 },
+    { year: '2026', event: t.about.milestone4, href: ATRIESTATES_PLAY_STORE_URL },
   ]
 
   return (
@@ -74,7 +76,19 @@ export default function AboutPageContent() {
                     <div className="absolute top-4 left-1 w-0.5 h-8 bg-gray-200 dark:bg-gray-700" />
                   )}
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 pt-0.5">{m.event}</p>
+                <div className="pt-0.5">
+                  <p className="text-gray-600 dark:text-gray-400">{m.event}</p>
+                  {m.href ? (
+                    <Link
+                      href={m.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-flex text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline"
+                    >
+                      View on Google Play &rarr;
+                    </Link>
+                  ) : null}
+                </div>
               </div>
             ))}
           </div>

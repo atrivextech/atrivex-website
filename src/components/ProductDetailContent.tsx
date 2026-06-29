@@ -25,6 +25,11 @@ export default function ProductDetailContent({ slug }: { slug: string }) {
     beta: t.products.statusBeta,
     'coming-soon': t.products.statusComingSoon,
   }
+  const ctaDescription = product.externalUrl
+    ? `${product.name} is now available to install from Google Play.`
+    : product.status === 'coming-soon'
+      ? t.products.waitlistDesc
+      : t.products.demoDesc
 
   return (
     <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -108,16 +113,25 @@ export default function ProductDetailContent({ slug }: { slug: string }) {
                   : `${t.products.getStartedWith} ${product.name}`}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-lg mx-auto">
-                {product.status === 'coming-soon'
-                  ? t.products.waitlistDesc
-                  : t.products.demoDesc}
+                {ctaDescription}
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-8 py-3 text-white hover:bg-primary-700 transition font-medium"
-              >
-                {product.status === 'coming-soon' ? t.products.joinWaitlist : t.products.scheduleDemo}
-              </Link>
+              {product.externalUrl ? (
+                <a
+                  href={product.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-8 py-3 text-white hover:bg-primary-700 transition font-medium"
+                >
+                  {product.externalLabel ?? 'Open App'}
+                </a>
+              ) : (
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-8 py-3 text-white hover:bg-primary-700 transition font-medium"
+                >
+                  {product.status === 'coming-soon' ? t.products.joinWaitlist : t.products.scheduleDemo}
+                </Link>
+              )}
             </div>
           </div>
         </div>

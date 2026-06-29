@@ -12,6 +12,8 @@ export type Product = {
   techStack: string[]
   status: 'live' | 'beta' | 'coming-soon'
   category: string
+  externalUrl?: string
+  externalLabel?: string
 }
 
 export const products: Product[] = [
@@ -129,8 +131,8 @@ export const products: Product[] = [
     slug: 'atriestate',
     name: 'AtriEstates',
     tagline: 'Real Estate Made Digital',
-    description: 'End-to-end real estate platform for property listing, virtual tours, document management, and transaction tracking.',
-    longDescription: 'AtriEstates brings the entire property buying and selling journey online. Agents list properties with photos and virtual tours, buyers browse and shortlist, documents are managed securely, and transactions are tracked from offer to registration. Built for the Indian real estate market with RERA compliance baked in.',
+    description: 'Published Android app for property listing, virtual tours, document management, and real estate transaction tracking.',
+    longDescription: 'AtriEstates brings the entire property buying and selling journey online. Agents list properties with photos and virtual tours, buyers browse and shortlist, documents are managed securely, and transactions are tracked from offer to registration. The Android app is now published on Google Play for the Indian real estate market.',
     icon: FiHome,
     logo: '/images/products/atriestate.png',
     features: [
@@ -142,10 +144,13 @@ export const products: Product[] = [
       'EMI calculator & financial planning',
       'Area & locality insights',
       'Agent performance dashboard',
+      'Android app published on Google Play',
     ],
     techStack: ['Next.js', 'Flutter', 'Node.js', 'PostgreSQL', 'AWS'],
-    status: 'coming-soon',
+    status: 'live',
     category: 'Real Estate',
+    externalUrl: 'https://play.google.com/store/apps/details?id=com.atrivex.atriestates',
+    externalLabel: 'View on Google Play',
   },
   {
     slug: 'bizos',

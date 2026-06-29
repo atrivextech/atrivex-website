@@ -21,6 +21,21 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-12">
+          <h2 className="text-3xl font-semibold mb-4">Recently Published App</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-4">
+            AtriEstates, our real estate Android app, is now published on Google Play.
+          </p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.atrivex.atriestates"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 text-white hover:bg-primary-700 transition font-medium"
+          >
+            View on Google Play
+          </a>
+        </section>
+
+        <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4">Core Values</h2>
           <ul className="space-y-4 text-gray-600 dark:text-gray-400 text-lg">
             <li>
