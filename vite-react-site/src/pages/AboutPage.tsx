@@ -21,18 +21,28 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">Recently Published App</h2>
+          <h2 className="text-3xl font-semibold mb-4">Recently Published Apps</h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-4">
-            AtriEstates, our real estate Android app, is now published on Google Play.
+            AtriEstates and AtriWork, our real estate and workforce Android apps, are now published on Google Play.
           </p>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.atrivex.atriestates"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 text-white hover:bg-primary-700 transition font-medium"
-          >
-            View on Google Play
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.atrivex.atriestates"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 text-white hover:bg-primary-700 transition font-medium"
+            >
+              AtriEstates on Google Play
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.atrivex.atriwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 text-white hover:bg-primary-700 transition font-medium"
+            >
+              AtriWork on Google Play
+            </a>
+          </div>
         </section>
 
         <section className="mb-12">
